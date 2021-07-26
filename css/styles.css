@@ -1,0 +1,42 @@
+* {
+    font-family: sans-serif;
+}
+
+#navbar {
+    grid-area: navigation;
+}
+
+#main-doc {
+    grid-area: main;
+}
+
+code {
+    background-color: lightgreen;
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.container {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 
+        "navigation main";
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+            "navigation"
+            "main";
+    }
+}
